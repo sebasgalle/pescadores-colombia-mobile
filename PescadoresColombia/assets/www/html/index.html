@@ -3,31 +3,48 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+		<!-- Scripts -->
+		<script src="../js/jquery.js"></script>
+		<script src="../js/jquery.bxslider.min.js"></script>
+		<script src="../js/inicializacionVistaPrincipal.js"></script>
+
+		<!-- Estilos -->
+		<link href="../styles/jquery.bxslider.css" rel="stylesheet" />
+		<link href="../styles/vistaPrincipal.css" rel="stylesheet" />
+		
 		<title>PESCADORES COLOMBIA</title>
 	</head>
 	
-	<body>
-		<header>LOGO PESCADORES COLOMBIA</header>
-		
-		<article>
-			BANNER
-		</article>
-		
-		<article>
-			<table>
+	<body onload= "inicializarIndex()">
+
+		<div id="encabezado" class="encabezadoPrincipal">
+			<img src="../images/logoPescadores.png" alt="Pescadores Colombia."/>
+		</div>	
+
+		<div id="sliderVistaPrincipal">
+				<ul class="bxslider">
+				  <li><img src="../images/pic1.jpg" /></li>
+				  <li><img src="../images/pic2.jpg" /></li>
+				  <li><img src="../images/pic3.jpg" /></li>
+				  <li><img src="../images/pic4.jpg" /></li>
+				</ul>				
+		</div>	
+
+		<div id="contenedorDeBotones">
+			<table width="100%" height="100%">
 				<tr>
-					<td widht>
-						<a href="vistaLogin.html"><img border="0" src="../images/login.png" alt="Iniciar sesion"></a>
-					</td>					
-					<td>
-						<a href="http://www.google.com"><img border="0" src="../images/signup.png" alt="Registrarse"></a>
-					</td>
+					<td width="100%">
+						<div id = "botonlogin">
+							<a href="vistaLogin.html"><img src="../images/login.png" alt="Iniciar sesion"></a>
+						</div>
+					</td>	
 				</tr>			
 			</table>
-		</article>		
-		
-		<footer>
-			<h6>Proyecto Integrador 1</h6>
-		</footer>	  	
+		</div>
+
+		<div id="pieDePagina">	
+			<img src="../images/pieDePagina.png" alt="Pescadores Colombia."/>		
+		</div>
+
 	</body>  
 </html>

@@ -4,7 +4,6 @@ function iniciarPermisos() {
 		
 var cargado = function(){
 	try {
-			alert('Ejecutando inicializacion');
 			FB.init({
 				appId : "653232568031668", //Codigo aplicación en facebook.
 				nativeInterface : CDV.FB,
@@ -13,6 +12,16 @@ var cargado = function(){
 		} catch (excep) {
 			alert("FATAL: Ha ocurrido un error grave.");
 		}
+};
 
-		alert('FB inicializado.');
+function login() {
+	FB.login(function(response) {
+		if (response.authResponse) {
+			alert('SESION INICIADA: BIENVENIDO.');
+		} else {
+			alert('NO SE PUDO INICIAR SESION.');
+		}
+	}, {
+		scope : "email"
+	});
 };
