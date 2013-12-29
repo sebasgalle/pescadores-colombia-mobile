@@ -1,0 +1,140 @@
+html{
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
+
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
+
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+
+	padding: 0px;
+	margin: 0px;
+
+	border: 1px solid blue;
+}
+
+/*Div's contenedores.*/
+#encabezado{
+	text-align: center;
+
+	height: 15%;
+	width: 100%;
+
+	padding: 0px;
+	margin: 0px;
+}
+
+#contenedorMenu{
+	max-height: 80%;
+	min-height: 80%;
+	height: 80%;
+
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+
+	overflow: hidden;
+
+	*zoom: 1;
+	position: relative;
+	text-align: center;
+
+	padding: 0%;
+	margin: 0%;
+
+	border: 1px solid blue;
+}
+
+#pieDePagina{
+	text-align: center;
+	
+	height: 5%;
+	width: 100%;
+
+	position: relative;
+	text-align: center;
+}
+
+/*Contenedor de los botones del menu de login.*/
+#tablaMenu{
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
+
+	max-width: 96%;
+	min-width: 96%;
+	width: 96%;
+
+	position: static;
+	padding: 0px;
+
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.celdaMenu{
+	max-height: 50%;
+	min-height: 50%;
+	height: 50%;
+
+	max-width: 50%;
+	min-width: 50%;
+	width: 50%;
+
+	position: static;
+	padding: 0px;
+	margin: 0px;
+
+	/*border: 1px solid green;*/
+}
+
+/*Imagenes del menu.*/
+.logoOpcionMenu{
+	max-height: 80%;
+	min-height: 80%;
+	height: 80%;
+
+	max-width: 80%;
+	min-width: 80%;
+	width: 80%;
+
+	margin: 10% 10% 10% 10%;
+
+	border: 1px solid blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
