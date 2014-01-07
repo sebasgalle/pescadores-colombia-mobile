@@ -1,43 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+	<head>	
+		<!-- Atributos -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">			
+		<title>PESCADORES COLOMBIA</title>
+
 		<!-- Scripts -->
-		<script src="../js/jquery.js"></script>
-		<script src="../js/jquery.bxslider.min.js"></script>
-		<script src="../js/inicializacionVistaPrincipal.js"></script>
+		<script src = "../js/jquery/jquery.js"></script>
+		<script src = "../js/plugins/jquery.bxslider.min.js"></script>
+		<script src = "../js/app/index.js"></script>
 
 		<!-- Estilos -->
-		<link href="../css/jquery.bxslider.css" rel="stylesheet" />
-		<link href="../css/vistaPrincipal.css" rel="stylesheet" />
-		<link href="../css/estilosBotones.css" rel="stylesheet" />
-		
-		<title>PESCADORES COLOMBIA</title>
+		<link href = "../css/plugins/jquery.bxslider.css" rel="stylesheet" />
+		<link href = "../css/utilidades/botones.css" rel="stylesheet"/>
+		<link href = "../css/utilidades/plantillaBase.css" rel="stylesheet" />
+		<link href = "../css/vistas/index.css" rel="stylesheet" />
 	</head>
 	
-	<body onload= "inicializarVistaPrincipal()">
+	<body onload = "inicializarVista()">
+		<header id = "cabecera">
+			<div id = "contenedorLogotipo">
+				<img id = "logotipo" src = "../img/logoPescadores.png" alt="Pescadores Colombia."/>
+			</div>		
+		</header>
 
-		<div id="encabezado" class="encabezadoPrincipal">
-			<img src="../img/logoPescadores.png" alt="Pescadores Colombia."/>
-		</div>	
+		<section id = "cuerpo">
+			<article id = "banner">
+				<ul id = "bxslider" class = "bxslider">
+				</ul>			
+			</article>
+			<article id = "botones">
+				<a href="login_pescadores.html" class="boton">INICIAR SESION</a>				
+			</article>
+		</section>
 
-		<div id="sliderVistaPrincipal">
-				<ul class="bxslider">
-				  <li><img src="../img/pic1.jpg" /></li>
-				  <li><img src="../img/pic2.jpg" /></li>
-				  <li><img src="../img/pic3.jpg" /></li>
-				  <li><img src="../img/pic4.jpg" /></li>
-				</ul>				
-		</div>	
-
-		<div id="contenedorDeBotones">
-			<a class="button" href="vistaLogin.html">INICIAR SESION</a>		
-		</div>
-
-		<div id="pieDePagina">	
-			<img src="../img/pieDePagina.png" alt="Pescadores Colombia."/>
-		</div>
-
+		<footer id="pieDePagina">
+			<article id = "contenidoPieDePagina">
+				<p id = "enunciadoPieDePagina">SPINNER LABS<br/>spinnerlabs@gmail.com<br/>2014</p>
+			</article>
+		</footer>
 	</body>  
 </html>
