@@ -6,7 +6,7 @@
 .indicadorCarga{
 	position: absolute;
 	top: 50%;
-	left: 0%;
+	left: 0;
 	width: 150px;
 	height: 110px;
 }
@@ -22,18 +22,17 @@
 }
 
 #leyenda{
-	position: absolute;
+	position: absolute;	
 	top: 60%;
-	left: 50%;
-	width: 150px;
-	height: 80px;
-	margin-top: 55px;
-	margin-left: -90px; 
+	left: 10%;
+	width: 80%;
+	height: 80px;	
+	margin-top: 60px;
 }
 
 #titulo{
 	position: absolute;
-	width: 260px;
+	width: 100%;
 	height: 80px;
 }
 

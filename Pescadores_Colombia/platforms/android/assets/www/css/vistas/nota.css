@@ -1,0 +1,41 @@
+#tituloNota{
+	width: 100%;
+	height: 8%;
+	text-align: center;
+
+	font-family:Comic Sans MS;
+	font-size: 20px;
+	font-weight:bold;
+	font-style:normal;
+	color: gray;
+
+	margin: 0 0 2% 0;
+}
+
+/* Maquetacion de la tabla */
+
+
+
+/* Contenedores*/
+#cuerpoComentario{
+	resize: none;
+	height: 100%;
+	width: 100%;
+
+}
+
+#tabla{
+	width: 100%;
+	height: 90%;
+}
+
+#comentario{
+	width: 100%;
+	height: 80%;
+}
+
+.botonesDeAccion{
+	height: 10%;
+	width: 50%;
+	text-align: center;
+}

@@ -1,0 +1,114 @@
+/* CONFIGURACIONES GENERALES */
+html{
+	max-height: 98%;
+	min-height: 98%;
+	height: 98%;
+
+	max-width: 98%;
+	min-width: 98%;
+	width: 98%;
+
+	padding: 0px;
+	margin: 1% 1% 1% 1%;
+}
+
+body{
+	max-height: 100%;
+	min-height: 100%;
+	height: 100%;
+
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+
+	padding: 0px;
+	margin: 0px;
+}
+
+/*CONFIGURACION DE SECCIONES*/
+#cabecera{
+	height: 15%;
+	width: 100%;
+	text-align: center;
+
+	background-color: #CB4416;
+	border-radius: 10px;
+	border: 1px solid white;
+}
+
+#cuerpo{
+	height: 75%;
+	width: 100%;
+
+	text-align: center;
+	border: 1px solid white;
+}
+
+#pieDePagina{
+	height: 10%;
+	width: 100%;
+
+	text-align: center;
+	background-color: #CB4416;
+	border: 1px solid white;
+}
+
+/* CONFIGURACION DE CONTENEDORES */
+#contenedorFotoUsuario{
+	width: 20%;
+	height: 88%;
+	float: left;
+	text-align: center;
+
+	margin: 1% 1% 1% 1%;
+	border-radius: 5px;
+	border: 1px solid white;
+}
+
+#contenedorDatosUsuario{
+	width: 75%;
+	height: 88%;
+	float: left;
+	text-align: center;
+
+	margin: 1% 0 1% 0%;
+}
+
+#contenedorPieDePagina{
+	width: 100%;
+	height: 90%;
+
+	text-align: center;
+	margin: 1% 0% 0% 0%;
+	background-color: white;
+	border: 1px solid white;
+}
+
+/*COMPONENTES*/
+#fotoUsuario{
+	height: 100%;
+	width: 100%;
+}
+
+#nombreUsuario{
+	width: 100%;
+	height: 70%;
+	text-align: center;
+}
+
+#contendorMenuPrincipal{
+	width: 100%;
+	height: 30%;
+}
+
+
+#enunciadoPieDePagina{
+	width: 99%;
+	height: 98%;
+
+	margin: 0% 0% 0% 0%;
+	font-family:Comic Sans MS;
+	font-size:10px;
+	font-weight:bold;
+	font-style:normal;
+}

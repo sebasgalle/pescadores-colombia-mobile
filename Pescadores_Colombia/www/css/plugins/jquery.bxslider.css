@@ -72,6 +72,9 @@
 	margin-left: 2%;
 	margin-right: 2%;
 	position: relative;
+
+	/*Se ocultan los botones de paginados*/
+	display: none;
 }
 
 
@@ -79,14 +82,14 @@
 ===================================*/
 .bx-wrapper .bx-viewport {
 	-moz-box-shadow: 0 0 5px #4B8A08;
-	-webkit-box-shadow: 0 0 5px #4B8A08;
-	box-shadow: 0 0 5px #4B8A08;
-	border: solid #4B8A08 1px;
+	-webkit-box-shadow: 0 0 5px #CB4416;
+	box-shadow: 0 0 5px #CB4416;
+	border: solid #CB4416 1px;
 	margin-right: 2%;
 	margin-left: 2%;
-	margin-bottom: 0px;
-	margin-top: 0px;
-	background: #fff;
+	margin-bottom: 0;
+	margin-top: 0;
+	background: #FFFFFF;
 }
 
 .bx-wrapper .bx-pager,
@@ -100,7 +103,7 @@
 /* LOADER */
 .bx-wrapper .bx-loading {
 	min-height: 50px;
-	background: url(../images/bx_loader.gif) center center no-repeat #fff;
+	background: url(../img/bx_loader.gif) center center no-repeat #fff;
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -194,7 +197,7 @@
 	width: 10px;
 	height: 11px;
 	outline: 0;
-	background: url(../images/controls.png) -86px -11px no-repeat;
+	background: url(../img/controls.png) -86px -11px no-repeat;
 	margin: 0 3px;
 }
 
@@ -209,7 +212,7 @@
 	width: 9px;
 	height: 11px;
 	outline: 0;
-	background: url(../images/controls.png) -86px -44px no-repeat;
+	background: url(../img/controls.png) -86px -44px no-repeat;
 	margin: 0 3px;
 }
 

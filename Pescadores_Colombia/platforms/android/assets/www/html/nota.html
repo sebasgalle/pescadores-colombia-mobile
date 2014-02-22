@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<!-- Atributos -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>PESCADORES COLOMBIA</title>
+
+		<!-- Scripts -->
+		<script type="text/javascript" charset="utf-8" src="../js/aplicacion/notas.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/jquery/jquery.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/cordova-1.6.1.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/facebook/cdv-plugin-fb-connect.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/facebook/facebook-js-sdk.js"></script>
+
+		<!-- Estilos -->
+		<link href="../css/estilosBotones.css" rel="stylesheet" />
+		<link type="text/css" href="../css/utilidades/plantillaBaseMuro.css" rel="stylesheet">
+		<link type="text/css" href="../css/utilidades/botones.css" rel="stylesheet">
+		<link type="text/css" href="../css/vistas/nota.css" rel="stylesheet">
+	</head>
+	<body>
+		<header id = "cabecera">
+			<div  id = "contenedorFotoUsuario">
+				<img id = "fotoUsuario" src="../img/fotoTemporal.png" alt="Foto Usuario">
+			</div>
+
+			<section id = "contenedorDatosUsuario">
+				<div id = "nombreUsuario">NOMBRE USUARIO EN SESION</div>
+			</section>
+		</header>
+
+	<section id = "cuerpo">
+		<article>
+			<div id = "tituloNota">
+				PUBLICAR NOTA
+			</div>
+
+			<form action="javascript:post();" method="post">
+				<table id = "tabla">
+					<tr>
+						<td colspan = "2" id = "comentario">
+							<textarea id = "cuerpoComentario"
+									autofocus
+									maxlength = "400"
+									></textarea>
+						</td>
+					</tr>
+					<tr>
+						<td class = "botonesDeAccion">
+							<INPUT class = "boton" type="submit" value="Enviar">
+						</td>
+						<td class = "botonesDeAccion">
+							<INPUT class = "boton" type="reset" value="Borrar">
+						</td>
+					</tr>
+					<tr>
+						<td colspan = "2" class = "botonesDeAccion">
+							<a class = "boton" href="muro.html" class="button">CANCELAR</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+
+		</article>
+	</section>
+
+		<footer id="pieDePagina">
+			<article id = "contenedorPieDePagina">
+				<p id = "enunciadoPieDePagina">SPINNER LABS<br/>spinnerlabs@gmail.com<br/>2014</p>
+			</article>
+		</footer>
+	</body>
+</html>
+
+
