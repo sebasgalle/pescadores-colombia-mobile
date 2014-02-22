@@ -1,0 +1,99 @@
+/*CONFIGURACION DE SECCIONES*/
+#menuInicioDeSesionSocial{
+	overflow: auto; /*Empleado para habilitar un scroll cuando sea necesario.*/
+}
+
+/* CONFIGURACION DE CONTENEDORES */
+
+.cuerpo{
+	display: inline-block;
+}
+
+#menuInicioDeSesionSocial{
+	max-height: 95%;
+	min-height: 95%;
+	height: 95%;
+
+	max-width: 20%;
+	min-width: 20%;
+	width: 20%;
+
+	float: left;
+	display: line;
+	position: relative;
+	text-align: center;
+
+	padding: 0 0 0 0;
+	margin: 1% 1% 1% 1%;
+	border-radius: 5px;
+
+	background-color: #CC4416;
+}
+
+#menuInicioDeSesionNativo{
+	max-height: 95%;
+	min-height: 95%;
+	height: 95%;
+
+	max-width: 74%;
+	min-width: 74%;
+	width: 74%;
+
+	float: left;
+	position: relative;
+	text-align: center;
+
+	padding: 0 0 0 0;
+	margin: 1% 1% 1% 1%;
+}
+
+
+/*CONFIGURACION DE COMPONENTES*/
+.opcionDeInicioDeSesion{
+	margin: 5% 1% 0 5%;
+
+	position: relative;
+	text-align: center;
+
+	max-height: 15%;
+	min-height: 15%;
+	height: 15%;
+
+	max-width: 90%;
+	min-width: 90%;
+	width: 90%;
+}
+
+.opcionMenu{
+	max-height: 75%;
+	min-height: 75%;
+	height: 75%;
+
+	max-width: 75%;
+	min-width: 75%;
+	width: 75%;
+
+	margin: 5% 0 5% 0;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
