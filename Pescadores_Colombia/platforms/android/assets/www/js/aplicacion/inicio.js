@@ -2,32 +2,36 @@
 var urlBannerPromocional = "http://pescadores-colombia-api.spinnerlabs.co/image";
 
 /*FUNCIONES*/
-function inicializarVista(){
+function iniciarVista(){
 	cargarSlider();
 }
 
 function cargarSlider(){
-
     $.ajax({
-    	url: urlBannerPromocional,
-    	type: "GET",
-        dataType: "json",
+		url: urlBannerPromocional,
+		type: "GET",
+        dataType: "JSON",
 
         success: function (data, status) {
+			for(imagen in data){
+				var url = data[imagen].uri;
+				construirListaPromocional(url);
+			}
 
-        	for(imagen in data){
-        		var url = data[imagen].uri;
-        		construirListaPromocional(url);
-        	}
+			iniciarSlider();
+		},
 
-        	iniciarSlider();
-        },
+		error: function (status) {
+			$('#bxslider').append("<li><img src=\"../img/logotipos/mensaje_error.png\" /></li>");
+			$('#bxslider').append("<li><img src= \"../img/logotipos/logos_01.png\" /></li>");
+			iniciarSlider();
 
-        error: function (status) {
-        	/*Llamar metodo que inicialice un banner con imagenes 
-        	predefinidas evitando que aparezca vacio el banner en
-        	caso de	error*/
-            alert('Ha ocurrido un error. \n' + status);
+			$('#botonIngreso').remove();
+			$('#botones').append("<a href=\"../index.html\" class=\"boton\">INTENTAR DE NUEVO</a>"
+			);
+
+
+			return false;
         }
 	});
 
@@ -37,7 +41,7 @@ function cargarSlider(){
 function construirListaPromocional(url){
 
 	var imagen = "<li><img src=\"" + url + "\" /></li>";
-	 $('#bxslider').append(imagen);
+	$('#bxslider').append(imagen);
 
 	return false;
 }
@@ -66,9 +70,9 @@ function iniciarSlider(){
 			useCSS: true,
 
 			//Controles
-			controls: false,			
-			autoControls: false,			
-			autoControlsCombine: false,			
+			controls: false,
+			autoControls: false,
+			autoControlsCombine: false,
 			auto: true,
 			pause: 5000,
 			autoStart: true,
@@ -76,7 +80,7 @@ function iniciarSlider(){
 			autoDelay: 0,
 			easing: null,
 
-			//Transiciones del slider			
+			//Transiciones del slider
 			infiniteLoop: true,
 			mode: 'horizontal',
 			speed: 1500,

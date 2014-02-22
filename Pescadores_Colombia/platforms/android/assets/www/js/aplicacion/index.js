@@ -3,9 +3,7 @@ function iniciarAplicacion(ruta){
 }
 
 function redireccionar(ruta){
-
 	$( document ).ready(function() {
 		location.href = ruta;
 	});
 }
-

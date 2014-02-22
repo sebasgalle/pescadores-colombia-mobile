@@ -1,43 +1,43 @@
 <html>
 	<head>
 		<!-- Atributos -->
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">			
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>PESCADORES COLOMBIA</title>
 
 		<!-- Scripts  -->
 		<script type="text/javascript" charset="utf-8" src="../js/jquery/jquery.js"></script>
 		<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
-		<script type="text/javascript" charset="utf-8" src="../js/cordova-1.6.1.js"></script>		
+		<script type="text/javascript" charset="utf-8" src="../js/cordova-1.6.1.js"></script>
 		<script type="text/javascript" charset="utf-8" src="../js/facebook/cdv-plugin-fb-connect.js"></script>
-		<script type="text/javascript" charset="utf-8" src="../js/facebook/facebook-js-sdk.js"></script>	
+		<script type="text/javascript" charset="utf-8" src="../js/facebook/facebook-js-sdk.js"></script>
 		<script type="text/javascript" charset="utf-8" src="../js/aplicacion/panel_inicio_sesion.js"></script>
 
 		<!-- Estilos -->
 		<link href="../css/vistas/panel_inicio_sesion.css" rel="stylesheet" />
 		<link href = "../css/utilidades/plantillaBase.css" rel="stylesheet" />
 	</head>
-	
+
 	<body onload="vincularRedesSociales()">
 		<header id = "cabecera">
 			<div id = "contenedorLogotipo">
 				<img id = "logotipo" src = "../img/logotipos/logotipo_extendido.png" alt="Pescadores Colombia."/>
-			</div>		
+			</div>
 		</header>
 
 		<section id = "cuerpo">
 			<article id = "menuInicioDeSesionSocial" class = "contenedorMenu">
 				<section class = "opcionDeInicioDeSesion">
-					<a class = "vinculoInicioDeSesion" onclick="facebookLogin()"><img  class = "opcionMenu" src="../img/fbLogin.png" alt="Iniciar sesion con Facebook."/></a>
+					<a class = "vinculoInicioDeSesion" onclick="facebookLogin()"><img  class = "opcionMenu" src="../img/inicio_sesion/iconoFacebook.png" alt="Iniciar sesion con Facebook."/></a>
 				</section>
 
 				<section class = "opcionDeInicioDeSesion">
-					<a class = "vinculoInicioDeSesion" href="index.html"><img class = "opcionMenu" src="../img/logout.png" alt = "Volver a la ventana principal."/></a>
+					<a class = "vinculoInicioDeSesion" href="../index.html"><img class = "opcionMenu" src="../img/inicio_sesion/volver.png" alt = "Volver a la ventana principal."/></a>
 				</section>
 			</article>
 
 			<article id = "menuInicioDeSesionNativo"  class = "contenedorMenu">
-				<!-- sera reemplazado por el login que se hara para la aplicacion en releases posteriores-->
-				<img id = "fondoTemporal" src="../img/imagenLoginTemporal.png" alt = "PESCADORTES COMOLIMBIA."/>
+				<!-- sera reemplazado por el login que se hara para la aplicacion en releases posteriores -->
+				PESCADORES
 			</article>
 		</section>
 
@@ -46,5 +46,5 @@
 				<p id = "enunciadoPieDePagina">SPINNER LABS<br/>spinnerlabs@gmail.com<br/>2014</p>
 			</article>
 		</footer>
-	</body>  
+	</body>
 </html>

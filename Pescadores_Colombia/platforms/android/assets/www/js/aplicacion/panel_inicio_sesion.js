@@ -1,53 +1,55 @@
 function vincularRedesSociales(){
-	alert('Iniciando permisos.');		
 	iniciarPermisos();
-	alert('Permisos finalizados.');
 }
 
 function iniciarPermisos() {
+	//Inicio vinculacion con facebook.
 	document.addEventListener("deviceready", vincularFacebook(), true);
+	//Añadir vinculacion con las demas redes sociales.
 }
-		
-function vincularFacebook(){
 
+function vincularFacebook(){
 	$(document).ready(function(){
-	try {
-		alert('iniciando facebook');
+		try {
 			FB.init({
 				appId : "653232568031668",	//Codigo aplicación en facebook.
 				nativeInterface : CDV.FB,	//Interface para Phonegap/Cordova
 				useCachedDialogs : true
 			});
-
-		alert('Facebook iniciado');
 		} catch (excep) {
-			alert("Error:\n" + excep);
+			alert("ERROR GRAVE:\n" + excep);
 		}
 	});
 }
 
 function facebookLogin() {
-	alert('Presione logueo con facebook.');
-	
-	FB.login(function(response) {
-		alert('Entrando al login.');
+FB.getLoginStatus(function(response) {
+      if (response.status == 'connected') {
+        alert('CONECTADO ... :)');
+
+        var uid = response.authResponse.userID;
+        var accessToken = response.authResponse.accessToken;
+
+        alert('userID: ' + uid + ' token acceso: ' + accessToken);
+
+  } else if (response.status == 'not_authorized') {
+    alert('unautorized');
+  } else {
+    alert('sin login');
+    FB.login(function(response) {
 		if (response.authResponse) {
-			alert('SESION INICIADA: BIENVENIDO.');
+			location.href= "muro.html";
 		} else {
+
 			alert('NO SE PUDO INICIAR SESION.');
+
 		}
 	}, {
-		scope : "email"
+		scope : 'publish_actions'
 	});
-	
-	var pagina="vistaMuro.html";
-	location.href=pagina;
+  }
+ });
 
-}
 
-function facebookLogout(){
-	FB.logout(function(response){
-		alert('CERRANDO SESION.');
-	});
 }
 

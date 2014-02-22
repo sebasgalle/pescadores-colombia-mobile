@@ -26,7 +26,7 @@ body{
 }
 
 /*CONFIGURACION DE SECCIONES*/
-#cabecera{	
+#cabecera{
 	height: 20%;
 	width: 100%;
 	text-align: center;
@@ -39,7 +39,7 @@ body{
 	height: 70%;
 	width: 100%;
 
-	text-align: center;	
+	text-align: center;
 	border: 1px solid white;
 }
 
@@ -62,7 +62,7 @@ body{
 
 }
 
-#contenidoPieDePagina{	
+#contenidoPieDePagina{
 	height: 85%;
 	width: 98%;
 
@@ -89,7 +89,7 @@ body{
 	border: 1px solid white;
 }
 
-#enunciadoPieDePagina{	
+#enunciadoPieDePagina{
 	width: 99%;
 	height: 98%;
 
