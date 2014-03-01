@@ -23,33 +23,32 @@ function vincularFacebook(){
 }
 
 function facebookLogin() {
-FB.getLoginStatus(function(response) {
-      if (response.status == 'connected') {
-        alert('CONECTADO ... :)');
+	//Verificamos estado de logeo con facebook.
+	FB.getLoginStatus(function(response) {
+		if (response.status == 'connected'){
+			FB.api("/me",
+				function (response) {
+					if (response && !response.error) {
+						alert(response.name);
+						location.href= "muro.html";
+					}
+				}
+			);
 
-        var uid = response.authResponse.userID;
-        var accessToken = response.authResponse.accessToken;
-
-        alert('userID: ' + uid + ' token acceso: ' + accessToken);
-
-  } else if (response.status == 'not_authorized') {
-    alert('unautorized');
-  } else {
-    alert('sin login');
-    FB.login(function(response) {
-		if (response.authResponse) {
-			location.href= "muro.html";
+		} else if (response.status == 'not_authorized') {
+			alert('unautorized');
 		} else {
-
-			alert('NO SE PUDO INICIAR SESION.');
-
+			//Solicitamos login si no tenemos una sesion abierta.
+			FB.login(function(response) {
+				if (response.authResponse) {
+					location.href= "muro.html";
+				} else {
+					alert('ERROR.\nSeñor pescador. No se pudo vincular su cuenta de facebook con Pescadores Colombia. Por favor intentelo de nuevo.');
+				}
+			}, {
+				scope : 'scope'
+			});
 		}
-	}, {
-		scope : 'publish_actions'
 	});
-  }
- });
-
-
 }
 

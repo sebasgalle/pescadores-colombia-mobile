@@ -3,6 +3,14 @@ var urlBannerPromocional = "http://pescadores-colombia-api.spinnerlabs.co/image"
 
 /*FUNCIONES*/
 function iniciarVista(){
+	$( document ).ajaxStart(function() {
+	  contruirCargador();
+	});
+
+	$( document ).ajaxStop(function() {
+		$('#indicadorCarga').remove();
+	});
+
 	cargarSlider();
 }
 
@@ -19,6 +27,8 @@ function cargarSlider(){
 			}
 
 			iniciarSlider();
+			$('#botones').append("<a href=\"panel_inicio_sesion.html\" class=\"boton\">INICIAR SESION</a>"
+			);
 		},
 
 		error: function (status) {
@@ -26,10 +36,8 @@ function cargarSlider(){
 			$('#bxslider').append("<li><img src= \"../img/logotipos/logos_01.png\" /></li>");
 			iniciarSlider();
 
-			$('#botonIngreso').remove();
 			$('#botones').append("<a href=\"../index.html\" class=\"boton\">INTENTAR DE NUEVO</a>"
 			);
-
 
 			return false;
         }
@@ -91,4 +99,15 @@ function iniciarSlider(){
 	});
 
 	return false;
+}
+
+function contruirCargador(){
+	if (!document.getElementById('indicadorCarga')) {
+		var indicadorCarga = document.createElement('div');
+		indicadorCarga.id = 'indicadorCarga';
+		document.body.appendChild(indicadorCarga);
+    }
+
+    $('#indicadorCarga').append("<img id = \"logoCargador\" src = \"../img/logotipos/logo_cargador.png\" alt=\"Pescadores Colombia.\"/>"
+    );
 }
