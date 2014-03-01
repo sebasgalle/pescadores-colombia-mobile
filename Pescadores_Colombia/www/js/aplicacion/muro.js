@@ -14,6 +14,7 @@ function consultarPost(){
         success: function (data, status) {
 
         	for(comentario in data){
+                alert('pase: ' + comentario);
         		var nombre = data[comentario].author;
         		var fecha = data[comentario].created_at;
         		var cuerpoMensaje = data[comentario].body;
@@ -40,7 +41,6 @@ function construirMensaje(nombre, fechaComentario, cuerpoMensaje)
 	 "</span>";
 
 	 $('#muro').append(comentario);
-	return false;
 }
 
 function consultarDatosUsuario(){
