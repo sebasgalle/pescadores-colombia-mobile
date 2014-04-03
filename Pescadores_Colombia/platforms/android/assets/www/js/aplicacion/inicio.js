@@ -21,13 +21,14 @@ function cargarSlider(){
         dataType: "JSON",
 
         success: function (data, status) {
-			for(imagen in data){
+			for(var imagen in data){
 				var url = data[imagen].uri;
 				construirListaPromocional(url);
 			}
 
 			iniciarSlider();
-			$('#botones').append("<a href=\"panel_inicio_sesion.html\" class=\"boton\">INICIAR SESION</a>"
+
+			$('#botones').append("<a href=\"panel_inicio_sesion.html\" class=\"boton\">ENTRAR</a>"
 			);
 		},
 

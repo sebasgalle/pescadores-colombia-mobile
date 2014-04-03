@@ -10,6 +10,9 @@
 		<script type="text/javascript" charset="utf-8" src="../js/cordova-1.6.1.js"></script>
 		<script type="text/javascript" charset="utf-8" src="../js/facebook/cdv-plugin-fb-connect.js"></script>
 		<script type="text/javascript" charset="utf-8" src="../js/facebook/facebook-js-sdk.js"></script>
+
+		<script type="text/javascript" charset="utf-8" src="../js/utilidades/utilidades_facebook.js"></script>
+
 		<script type="text/javascript" charset="utf-8" src="../js/aplicacion/muro.js"></script>
 
 		<!-- Estilos -->
@@ -17,16 +20,14 @@
 		<link type="text/css" href="../css/utilidades/menus.css" rel="stylesheet">
 		<link type="text/css" href="../css/utilidades/plantillaBaseMuro.css" rel="stylesheet">
 	</head>
-	<body onload= "consultarPost()">
+	<body onload= "iniciarVista()">
 		<header id = "cabecera">
 			<div  id = "contenedorFotoUsuario">
-				<img id = "fotoUsuario" src="../img/fotoTemporal.png" alt="Foto Usuario">
+				<img id = "fotoUsuario" alt="Foto Usuario">
 			</div>
 
 			<section id = "contenedorDatosUsuario">
-				<div id = "nombreUsuario">
-					NOMBRE USUARIO EN SESION
-				</div>
+				<div id = "nombreUsuario"></div>
 				<div id = "contendorMenuPrincipal">
 					<nav id="navegacionMenuPrincipal">
 						<ul id = "baseMenu">
@@ -34,12 +35,10 @@
 								<img id = "flecha_menu" src="../img/flecha_menu.png" alt="Logo">
 								<ul>
 									<li><a href="nota.html">Publicar Nota</a></li>
-						 			<li><a href="#">Editar Perfil</a></li>
+						 			<li><a href="javascript:cerrarSesion();">Cerrar Sesion</a></li>
 								</ul>
 							</li>
-
 						</ul>
-
 					</nav>
 				</div>
 			</section>

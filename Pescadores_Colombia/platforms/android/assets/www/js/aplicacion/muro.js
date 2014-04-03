@@ -1,31 +1,39 @@
+function iniciarVista()
+{
+    vincularFacebook();
+    ingresarInformacionBasica();
+    consultarPost();
+}
+
 function redireccionaA(pagina){
 	location.href = pagina;
 	return false;
 }
 
 function consultarPost(){
+
 	var uri = "http://pescadores-colombia-api.herokuapp.com/wall";
 
     $.ajax({
-    	url: uri,
-    	type: "GET",
-        dataType: "json",
+        url: uri,
+        type: "GET",
+        dataType: "JSON",
+        cache: false,
 
         success: function (data, status) {
 
-        	for(comentario in data){
-                alert('pase: ' + comentario);
-        		var nombre = data[comentario].author;
-        		var fecha = data[comentario].created_at;
-        		var cuerpoMensaje = data[comentario].body;
+            for(var comentario in data){
+                var nombre = data[comentario].author;
+                var fecha = data[comentario].created_at;
+                var cuerpoMensaje = data[comentario].body;
 
-        		construirMensaje(nombre,fecha,cuerpoMensaje);
-        	}
+                construirMensaje(nombre,fecha,cuerpoMensaje);
+            }
         },
 
-        error: function (status) {
-            alert('Fallo llamado ajax' + status);
 
+        error: function (status) {
+            alert('ERROR!!.\nLa aplicacion fallo al intentar recuperar los comentarios publicados.' + status);
         }
 	});
 }
@@ -41,10 +49,6 @@ function construirMensaje(nombre, fechaComentario, cuerpoMensaje)
 	 "</span>";
 
 	 $('#muro').append(comentario);
-}
-
-function consultarDatosUsuario(){
-  alert('consiultando');
 }
 
 
