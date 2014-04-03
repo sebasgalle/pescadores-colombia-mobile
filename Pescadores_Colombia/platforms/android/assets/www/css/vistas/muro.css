@@ -1,21 +1,13 @@
 .comentarioMuro {
-	box-shadow:inset 0px 1px 0px 0px gray;
-	background-color: #07AABB;
-
-
-	border-radius: 5px;
-	border:1px solid gray;
-
 	display:inline-block;
-	width:95%;
+	width: 96%;
 
-	padding: 5px 5px 5px 5px;
-	margin: 1% 0 1% 0;
+	padding: 0 0 0 0;
+	margin: 2% 0 0 0;
 
 	font-family:Comic Sans MS;
 	text-decoration:none;
 }
-
 
 /*CONTENEDORES*/
 #tituloMuro{
@@ -38,15 +30,21 @@
 
 /*Configuracion de las Fuentes*/
 .nombreUsuario{
-	color: black;
+	background-image:url('../../img/fondosMuro/encabezado.jpg');
+	background-size: 100% 100%;
+
+	color: white;
 	font-size:15px;
 	font-weight: bold;
 	font-style:normal;
-
-	text-align:left;
+	text-align: center;
 }
 
 .fechaComentario{
+	background-image:url('../../img/fondosMuro/encabezado.jpg');
+	background-size: 100% 100%;
+
+	padding: 1% 0 1% 2%;
 	color: black;
 	font-size:12px;
 	font-weight:normal;
@@ -58,6 +56,10 @@
 }
 
 .cuerpoMensaje{
+	background-image:url('../../img/fondosMuro/cuerpo.jpg');
+	background-size: 100% 100%;
+
+	padding: 2% 2% 2% 2%;
 	color: black;
 	font-size:12px;
 	font-weight:normal;
