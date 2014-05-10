@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" >
+	<head>
+		<!-- Atributes -->
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+		<link rel = "stylesheet" href = "../css/utilities/general_template.css">
+		<link rel = "stylesheet" href = "../css/utilities/general_utilities.css">
+		
+		<!-- Scripts -->
+		<script type="text/javascript" charset="utf-8" src="../js/cordova-1.6.1.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/facebook/cdv-plugin-fb-connect.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../js/facebook/facebook-js-sdk.js"></script>
+		<script type="text/javascript" src = "../js/views/login.js"></script>
+		<script src="http://connect.facebook.net/en_US/all.js"></script>
+
+
+
+
+	</head>
+
+	<body>
+		<div data-role="page" id="index">
+			<div data-role="header" class = "header">
+				<h1>Login</h1>
+				<a data-role="button" data-icon="back" href="index.html">Atras</a>
+			</div>
+			<div data-role="content" class = "content" >	
+				<fb:login-button autologoutlink="true" perms="publish_stream"></fb:login-button>
+				<div id="fb-root">
+				</div>
+					
+					<script>
+window.fbAsyncInit = function() {
+        				FB.init({ appId: "653232568031668", status: true, cookie: true, xfbml: true });
+    					FB.Event.subscribe('auth.sessionChange', function(response) {
+       					if (response.session) {
+        					alert("se logueo");
+           					// A user has logged in, and a new cookie has been saved
+        				} else {
+        					alert("no se logueo");
+           					 // The user has logged out, and the cookie has been cleared
+       					}
+    				});
+    					jQuery(document).trigger('FBSDKLoaded'); //This is the most important line to solving the issue
+    				};
+    				(function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=269187653191150";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+    				(function($) {
+    $(document).bind('FBSDKLoaded', function() {
+        //Code using the FB object goes here.
+    });
+
+})(jQuery);
+    					 
+
+   
+					</script>
+			
+			</div>
+		</div>
+
+	</body>
+</html>
