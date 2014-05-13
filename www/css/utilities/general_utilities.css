@@ -12,8 +12,8 @@ Spinner Lab's Development Team.
 
 /* Loading Indicator Styles */
 #loadingIndicator{
-	border: 					2px solid #0088BC;
-	border-radius: 		10px;
+	border: 				2px solid #0088BC;
+	border-radius: 			10px;
 	position: 				absolute;
 	text-align: 			center;
 	overflow: 				hidden;
@@ -23,8 +23,8 @@ Spinner Lab's Development Team.
 	position: 				absolute;
     float: 					right;
 	width: 					150%;
-	height: 					65%;
-    top: 						30%;
+	height: 				65%;
+    top: 					30%;
 
     -webkit-animation: 	pez_nadando 5s infinite linear;
     -moz-animation: 		pez_nadando 5s infinite linear;
@@ -33,17 +33,17 @@ Spinner Lab's Development Team.
 
 #loadingLabel{
 	width: 					90%;
-	height: 					15%;
+	height: 				15%;
 	font-size: 				20px;
 	font-weight: 			bold;
 	font-family: 			'Comic Sans MS';
-	border-radius: 		10px;
-	margin: 					5% auto;
+	border-radius: 			10px;
+	margin: 				5% auto;
 	color: 					white;
-	background-color: 	#0088BC;
+	background-color: 		#0088BC;
 	line-height: 			150%;  /* Used for vertical alignment of the text.*/
 
-    -webkit-animation: 	fade 4000ms infinite;
+    -webkit-animation: 		fade 4000ms infinite;
     -moz-animation: 		fade 4000ms infinite;
     animation: 				fade 4000ms infinite;
 }
@@ -52,9 +52,9 @@ Spinner Lab's Development Team.
 @media only screen and (orientation: landscape) {
 	#loadingIndicator{
 		width: 				50%;
-		height: 				50%;
-		left: 					25%;
-		top: 					25%;
+		height: 			50%;
+		left: 				25%;
+		top: 				25%;
 		z-index: 			100;
 	}
 }
@@ -63,9 +63,9 @@ Spinner Lab's Development Team.
 @media only screen and (orientation: portrait) {
 	#loadingIndicator{
 		width: 				70%;
-		height: 				30%;
-		left: 					15%;
-		top: 					35%;
+		height: 			30%;
+		left: 				15%;
+		top: 				35%;
 		z-index: 			100;
 	}
 }

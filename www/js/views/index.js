@@ -11,7 +11,7 @@ Spinner Lab's Development Team.
 */
 
 // Local Variables
-var INITIAL_ROUTE = 'html/views/initial_view.html';
+var INITIAL_ROUTE = 'html/views/home.html';
 
 // Functions
 // This function is fired when the device is ready for execute cordova commands.
