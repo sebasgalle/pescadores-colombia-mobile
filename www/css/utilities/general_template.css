@@ -8,3 +8,10 @@
 	background-image: -webkit-linear-gradient(bottom, #F0FFFF 0%, #ADD8E6 100%);
 	background-image: -o-linear-gradient(bottom, #F0FFFF 0%, #ADD8E6 100%);
 }
+
+.contentForm{
+	border: none;
+	text-align: left;
+}
+
+
