@@ -11,7 +11,7 @@ Spinner Lab's Development Team.
 */
 
 // Local Variables
-var BannerResources = "http://pescadores-colombia-api.spinnerlabs.co/image";
+var bannerResources = "http://pescadores-colombia-api.spinnerlabs.co/image";
 
 // Functions
 // This function is called when de page is loading. It's in charge of initializing the setting of the ajax called, the slider and the main properties of the page.
@@ -25,21 +25,18 @@ function initView(){
 		$('#loadingIndicator').remove();
 	});
 
-	$(document).ready(function(){
-		loadSlider();
-	});
-
-	return false;
+	loadSlider();
 }
 
 // This function do the Ajax call to the server of PescadoresColombia for obtain the images that will be load in the slider.
 function loadSlider(){
+
     $.ajax({
-		url:		BannerResources,
-		type:		"GET",
+		url:			bannerResources,
+		type:			"GET",
         dataType:	"JSON",
 		cache:		false,
-		timeout:	10000,
+		timeout:		3000,
 
         success: function (data, status) {
 			for(var image in data){
@@ -47,60 +44,67 @@ function loadSlider(){
 			}
 
 			initializeSliderProperties();
+
+			$('#login_button').removeClass('fade_button');
+			$('#signup_button').removeClass('fade_button');
+
+			$('#login_button').addClass('login_button');
+			$('#signup_button').addClass('signup_button');
 		},
 
 		error: function (status) {
-			$('#bxslider').append("<li><img src=\"../img/logos/error_logo_1.png\" /></li>");
-			$('#bxslider').append("<li><img src= \"../img/logos/principal_logo_1.png\" /></li>");
+			$('#bxslider').append("<li><img src=\"../images/logos/error_logo_1.png\" /></li>");
+			$('#bxslider').append("<li><img src= \"../images/logos/principal_logo_1.png\" /></li>");
 
 			initializeSliderProperties();
+
+			$('#try_again_button').removeClass('fade_button');
+			$('#try_again_button').addClass('login_button');
         }
 	});
-
-	return false;
 }
 
 // This function contain the slider's properties initialization. This configuration can be consulted in http://bxslider.com/
 function initializeSliderProperties(){
 	$(document).ready(function(){
 		$('.bxslider').bxSlider({
-			// General Properties
-			video:					false,
-			preloadImages:			'all',
-			touchEnabled:			true,
-			oneToOneTouch:			false,
-			preventDefaultSwipeX:	false,
-			preventDefaultSwipeY:	false,
+			//Propiedades generales
+			video: false,
+			preloadImages: 'all',
+			touchEnabled: true,
+			oneToOneTouch: true,
+			preventDefaultSwipeX: true,
+			preventDefaultSwipeY: false,
 
-			// Visual Properties
-			slideMargin:			0,
-			startSlide:				0,
-			randomStart:			0,
-			slideSelector:			'',
-			captions:				false,
-			adaptiveHeight:			true,
-			adaptiveHeightSpeed:	500,
-			responsive:				true,
-			useCSS:					true,
+			//Propiedades visuales
+			slideMargin: 0,
+			startSlide: 0,
+			randomStart: 0,
+			slideSelector: '',
+			captions: false,
+			adaptiveHeight: true,
+			adaptiveHeightSpeed: 500,
+			responsive: true,
+			useCSS: true,
 
-			// Controls
-			controls:				false,
-			autoControls:			false,
-			autoControlsCombine:	false,
-			auto:					true,
-			pause:					5000,
-			autoStart:				true,
-			autoHover:				false,
-			autoDelay:				0,
-			easing:					null,
+			//Controles
+			controls: false,
+			autoControls: false,
+			autoControlsCombine: false,
+			auto: false,
+			pause: 5000,
+			autoStart: false,
+			autoHover: false,
+			autoDelay: 0,
+			easing: null,
 
-			// Slider's Transitions
-			infiniteLoop:			true,
-			mode:					'horizontal',
-			speed:					1500,
-			ticker:					false,
-			tickerHover:			false
+			//Transiciones del slider
+			infiniteLoop: true,
+			mode: 'horizontal',
+			speed: 500,
+
+			ticker: false,
+			tickerHover: false
 		});
 	});
-	return false;
 }
