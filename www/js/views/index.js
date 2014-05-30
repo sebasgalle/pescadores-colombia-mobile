@@ -3,7 +3,7 @@
 									JAVASCRIPT DOCUMENTATION
 ---------------------------------------------------------------------------------------------------
 Description:
-This file contain the functions used for the index page.
+This file contain the functions used for the index page. This functions allow to the application make register and process the different events in the main page of the application. The principal function is initAplication, it allows to application know when  the device is ready.
 
 Author:
 Spinner Lab's Development Team.
@@ -11,7 +11,7 @@ Spinner Lab's Development Team.
 */
 
 // Local Variables
-var INITIAL_ROUTE = 'html/views/home.html';
+var INITIAL_ROUTE = 'html/home.html';
 
 // Functions
 // This function is fired when the device is ready for execute cordova commands.
