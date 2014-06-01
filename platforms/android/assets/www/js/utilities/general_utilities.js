@@ -22,6 +22,10 @@ function buildLoaderIndicator(){
 
     $('#loadingIndicator').append("<div id = \"loadingLabel\">CARGANDO</div>");
 
-    $('#loadingIndicator').append("<img id = \"logoLoading\" src = \"../img/logos/fish_logo_prueba.png\" alt=\"Cargando Pescadores Colombia...\"/>");
+    $('#loadingIndicator').append("<img id = \"logoLoading\" src = \"../images/logos/fish_logo_prueba.png\" alt=\"Cargando Pescadores Colombia...\"/>");
 
+}
+
+function reload(){
+	location.reload(true);
 }

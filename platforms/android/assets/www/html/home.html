@@ -33,9 +33,12 @@
 					<ul id = "bxslider" class="bxslider"></ul>
 				</article>
 			</div>
-			<div data-role="footer" data-position="bottom" class = "footer">
-				<a href="login.html" data-role="button" data-transition="slideup" data-inline="true" class="login_button">Log In</a>
-				<a href="signup.html" data-role="button" data-transition="slideup" data-inline="true" data-theme="g" class="signup_button">Sign Up</a>
+			<div data-role="footer" data-position="bottom" class = "footer" id = "footer">
+				<a href="login.html" data-role="button" data-transition="slideup" data-inline="true" class="fade_button" id = "login_button"  rel="external">Log In</a>
+
+				<a href="signup.html" data-role="button" data-transition="slideup" data-inline="true" data-theme="g" class="fade_button" id = "signup_button" rel="external">Sign Up</a>
+
+				<a href="javascript:reload();" data-role="button" data-transition="slideup" data-inline="true" data-theme="g" class="fade_button" id = "try_again_button">Try Again</a>
 			</div>
 		</div>
 	</body>

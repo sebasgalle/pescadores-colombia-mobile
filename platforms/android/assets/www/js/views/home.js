@@ -30,6 +30,7 @@ function initView(){
 
 // This function do the Ajax call to the server of PescadoresColombia for obtain the images that will be load in the slider.
 function loadSlider(){
+
     $.ajax({
 		url:			bannerResources,
 		type:			"GET",
@@ -43,6 +44,12 @@ function loadSlider(){
 			}
 
 			initializeSliderProperties();
+
+			$('#login_button').removeClass('fade_button');
+			$('#signup_button').removeClass('fade_button');
+
+			$('#login_button').addClass('login_button');
+			$('#signup_button').addClass('signup_button');
 		},
 
 		error: function (status) {
@@ -50,6 +57,9 @@ function loadSlider(){
 			$('#bxslider').append("<li><img src= \"../images/logos/principal_logo_1.png\" /></li>");
 
 			initializeSliderProperties();
+
+			$('#try_again_button').removeClass('fade_button');
+			$('#try_again_button').addClass('login_button');
         }
 	});
 }
