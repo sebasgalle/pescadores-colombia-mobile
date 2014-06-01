@@ -10,6 +10,10 @@ Spinner Lab's Development Team.
 
 */
 
+.fade_button{
+	display: none !important;
+}
+
 /* Loading Indicator Styles */
 #loadingIndicator{
 	border: 				2px solid #0088BC;

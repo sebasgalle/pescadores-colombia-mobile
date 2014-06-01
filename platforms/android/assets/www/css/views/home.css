@@ -4,6 +4,12 @@
 	font-size: 15px !important;
 }
 
+.try_again_button{
+	width: 50% !important;
+	height: 25% !important;
+	font-size: 15px !important;
+}
+
 /* Configuration made for show the application when the device is in the horizontal position. */
 @media only screen and (orientation: landscape) {
 	#main_logo{
