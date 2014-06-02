@@ -34,8 +34,8 @@ $(document).on("pageshow", function (event) {
 
 function initView()
 {
-    vincularFacebook();
-    ingresarInformacionBasica();
+    //vincularFacebook();
+    //ingresarInformacionBasica();
     readPost();
 }
 
