@@ -61,7 +61,8 @@ function readPost(){
                 var date = data[comment].created_at;
                 var message = data[comment].body;
 
-                buildMessage(author,date,message);
+                var new_message = buildMessage(author,date,message);
+                $('#wall').append(new_message);
             }
         },
 
@@ -83,12 +84,13 @@ function buildMessage(author, date, message)
 	 	"</div>"+
 	 "</span>";
 
-	 $('#wall').append(comment);
+     return comment;
 }
 
 function post(){
     var name = "USUARIO EN SESION";
     var message = $('#newComment').val();
+    var date = new Date();
 
     var messageBody = {author: name, body: message};
     var uri = "http://pescadores-colombia-api.herokuapp.com/wall";
@@ -99,7 +101,8 @@ function post(){
         data: messageBody,
 
         success: function (data) {
-            redirectTo("wall.html");
+            var new_message = buildMessage(name,date,message);
+            $('#body-section').prepend(new_message);
         },
         error: function (status) {
             alert('Error al postear' + status);
